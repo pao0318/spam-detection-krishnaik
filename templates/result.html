@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction bro</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="brandname">
+                <h1>ML APP</h1>
+            </div>
+            <h2>Spam detect karega yeh bhaimya</h2>
+        </div>
+    </header>
+    <p style="color:black; font-size:20; text-align:center;">
+        <h1>Results h bhaimya</h1>
+    </p>
+    <div class="results">
+
+        {% if prediction == 1%}
+        <h2 style="color: blueviolet;">Spamwa h bhaimya</h2>
+        {% elif prediction == 0%}
+        <h2 style="color: coral;">Not a spam aapki nazar m galti h</h2>
+        {% endif %}
+    </div>
+
+
+</body>
+
+</html>
